@@ -7,7 +7,7 @@ This is an integration of [traq][1] v0.5 or later for Sublime Text 3.
 traq is available as sublime command. When you open the command prompt enter `traq` and then
 the arguments you want to pass to traq. E.g. `traq` -> `-p client prototype`.
 
-For more details see [traq][1].
+You need to have traq installed. For installation and usage instructions take a look at [traq][1].
 
 MIT licensed
 
