@@ -1,6 +1,6 @@
 # traq for Sublime Text 3
 
-This is an integration for [traq][1] for Sublime Text 3.
+This is an integration of [traq][1] v0.5 or later for Sublime Text 3.
 
 ## Usage
 
