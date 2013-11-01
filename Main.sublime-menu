@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tools",
+    "children":
+    [
+      {
+        "caption": "traq",
+        "command": "sublime_traq"
+      }
+    ]
+  }
+]

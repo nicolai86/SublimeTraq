@@ -1,0 +1,6 @@
+[
+  {
+    "command": "sublime_traq",
+    "keys": ["super+shift+t"],
+  }
+]
