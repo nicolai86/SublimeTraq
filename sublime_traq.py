@@ -10,8 +10,19 @@ class SublimeTraqCommand(sublime_plugin.WindowCommand):
     self.window.show_input_panel("traq:", "", lambda user_input: self.traq(view, user_input), None, None)
 
   def traq(self, view, command):
+    env_command = ['bash', '-c', 'source $HOME/.traqrc && env']
+
+    proc = subprocess.Popen(env_command, stdout = subprocess.PIPE)
+
+    for line in proc.stdout:
+      (key, _, value) = line.decode("utf-8").strip().partition("=")
+      os.environ[key] = value
+
+    proc.communicate()
+
     # TODO validate available commands
-    command = "{}/bin/traq {}".format(os.environ["TRAQ_PATH"], command)
+    command = "{}/bin/traq {}".format(os.environ["TRAQ_PATH"].strip(), command)
+    print(dict(os.environ))
     cmd = [command]
 
     proc_env = os.environ.copy()
